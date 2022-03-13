@@ -193,4 +193,85 @@ header h1 span {
 	flex-direction: column;
 }
 /* End Our Story */
+/* Chef's Pick */
+.chefs-pick {
+	width: 100%;
+	height: 88rem;
+	display: flex;
+	background-color: #fffaf8;
+}
 
+.chefs-pick h1,
+.chefs-pick h2 {
+	text-align: center;
+}
+
+.chefs-pick .left {
+	width: 75%;
+	padding: 10rem 0;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+}
+
+.chefs-pick .menu-items {
+	width: 100%;
+	padding: 0 15rem;
+}
+
+.chefs-pick .menu-item .photo {
+	width: 10rem;
+}
+
+.chefs-pick .menu-item .photo img {
+	width: 10rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.chefs-pick .menu-item {
+	display: flex;
+	margin-bottom: 2rem;
+}
+
+.chefs-pick .info {
+	width: 100%;
+	padding-left: 2rem;
+}
+
+.chefs-pick .menu-title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.chefs-pick .menu-title {
+	font-size: 3rem;
+	font-weight: 400;
+}
+
+.chefs-pick .description {
+	font-size: 1.8rem;
+	width: 75%;
+}
+
+.chefs-pick .right {
+	width: 25%;
+	background: url("../assets/images/food.png") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.chefs-pick .right::before {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: overlay;
+}
+
+/* End Chef's Pick */
