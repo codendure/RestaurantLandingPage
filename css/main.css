@@ -108,6 +108,10 @@ header h1 span {
 	padding: 0.4rem 15rem;
 }
 
+#nav-control {
+	display: none;
+}
+
 .main-nav .logo {
 	width: 20rem;
 	height: 100%;
@@ -162,6 +166,10 @@ header h1 span {
 	position: relative;
 }
 
+.story .img-wrapper img {
+	width: 100%;
+}
+
 .story .img-wrapper::before {
 	content: "";
 	width: 90%;
@@ -196,7 +204,7 @@ header h1 span {
 /* Chef's Pick */
 .chefs-pick {
 	width: 100%;
-	height: 88rem;
+	min-height: 88rem;
 	display: flex;
 	background-color: #fffaf8;
 }
@@ -216,7 +224,7 @@ header h1 span {
 
 .chefs-pick .menu-items {
 	width: 100%;
-	padding: 0 15rem;
+	padding: 5rem 15rem;
 }
 
 .chefs-pick .menu-item .photo {
@@ -412,3 +420,131 @@ header h1 span {
 	margin-bottom: 2rem;
 }
 /* End Footer */
+
+/* Media Queries */
+@media (max-width: 1280px) {
+	.chefs-pick .menu-title {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 900px) {
+	html {
+		font-size: 37.5%;
+	}
+
+	.story p {
+		font-size: 2.3rem;
+		line-height: 2;
+		padding-right: 5rem;
+	}
+
+	.chefs-pick .description {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.main-nav {
+		padding-left: 5rem;
+	}
+	.nav-links {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		right: -30rem;
+		padding-top: 15rem;
+		background-color: var(--color-white);
+		height: 100vh;
+		width: 30rem;
+		align-items: center;
+		transition: right 0.5s;
+	}
+
+	.main-nav .nav-links a {
+		color: #000000;
+	}
+
+	.nav-icon {
+		color: var(--color-primary);
+		font-size: 5rem;
+		z-index: 1;
+		position: fixed;
+		top: 3rem;
+		right: 5rem;
+	}
+
+	#nav-control:checked ~ .nav-links {
+		right: 0;
+	}
+
+	header {
+		margin-bottom: 5rem;
+	}
+	header h1 {
+		font-size: 9rem;
+		width: 80%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	header h1 span {
+		font-size: 4rem;
+	}
+
+	.story .left {
+		display: none;
+	}
+
+	.story p {
+		text-align: left;
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.story .right {
+		width: 100%;
+	}
+
+	.chefs-pick .right {
+		display: none;
+	}
+
+	.chefs-pick .left {
+		width: 100%;
+	}
+
+	.chefs-pick .menu-items {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.reservation {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.reservation .left {
+		width: 100%;
+		order: 2;
+	}
+
+	.reservation .right {
+		width: 100%;
+		order: 1;
+	}
+
+	.form-container .row {
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.form-container .row .col {
+		margin-bottom: 2rem;
+	}
+
+	.form-container .row .col input {
+		font-size: 3rem;
+	}
+}
